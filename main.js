@@ -8,13 +8,16 @@ class Pet {
 
 
 describe() {
-    console.log( `My ${this.species}s name is ${this.name} and they are a ${this.breed}. He is a good ${this.gender}.`
-    );
+    if (this.gender == 'male') {
+    console.log( `My ${this.species}s name is ${this.name} and he is a ${this.gender} ${this.breed}.`
+    )} else {
+        console.log (`My ${this.species} is named ${this.name} and is a ${this.breed}`)
+    }
    }
 }
 
 function main() {
-    const myPet = new Pet('saint bernard', 'Otis', 'boy', 'dog');
+    const myPet = new Pet('saint bernard', 'Otis', 'male', 'dog');
     myPet.describe();
 }
 
